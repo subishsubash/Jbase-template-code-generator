@@ -1,0 +1,246 @@
+Api:
+"/template"
+
+Description: 
+	Inputting the required details to create .component, .b, .FIELDS.
+
+Method:
+	POST
+
+Request json:
+
+{
+
+	"applicationName" : "RD.SWIFT.GPI.DIR",
+	"moduleName" :  "RD",
+	"componentName" : "RD.Config",
+	"isReservedFieldRequired" : "Yes",
+	"numberOfReservedFields" :10,
+	"isAuditFieldRequired" :"Yes",
+	"isLocalFieldRequired" :"Yes",
+	"isOverrideFieldRequired" :"Yes",
+	"location" : "C:/Users/subas/Desktop/Template/localworkspace",
+	"isModificationHistoryRequired" : "Yes",
+	"enhancementNo" : 3125855,
+	"taskNumber" : 3125859,
+	"tableTitle" : "SWIFT GPI directory",
+	"stereotype" : "H",
+	"subProduct" :"-",
+	"classification" : "INT",
+	"systemClearfile" : "-",
+	"relatedFiles" : "-",
+	"postClosingFile" : "-",
+	"equatePrefix" : "RD.SGD",
+	"tableIdPrefix" : "RD",
+	"blockedFunctions" : "V",
+	"triggerfield" : "NO",
+	"CNsOperation" :"ALL",
+	"numberOfFields" :3, 
+	"isHelpText" : "Yes",
+	"tableDescription" : "Application to replace of BIC",
+	"fieldProperties" : [
+		{
+			"name" :"FLAG",
+			"dataType" :"A",
+			"length" :1,
+			"property1" :"Mandatory/NOInput",
+			"property2" :"-",
+			"propertyValue" : "subi_david",
+			"fieldDescription" :"Flag\ntest",
+			"fieldValidation" : "Mandatory\ntets\ntest1"
+		},
+		{
+			"name" :"XX.XX>SOURCE.KEY",
+			"dataType" :"A",
+			"length" :35,
+			"property1" :"Mandatory/NOInput",
+			"property2" :"-",
+			"propertyValue" : "COMPANY",
+			"fieldDescription" :"source key",
+			"fieldValidation" : "Mandatory"
+		},
+		{
+			"name" :"XX-BRANCH.CODE",
+			"dataType" :"A",
+			"length" :3,
+			"property1" :"Mandatory/NOInput",
+			"property2" :"-",
+			"propertyValue" : "TABLE_NAME",
+			"fieldDescription":"-",
+			"fieldValidation" : "Mandatory"
+		}	
+	]
+	
+}	
+
+Response
+success response
+{
+	result:"sucess",
+	data:"Template have created successfully."	
+}
+failure response
+{
+	result:"fail",
+	data:"Error in creating template (Specific error message)"	
+}
+
+
+APi:
+"/templatedetails"
+
+Method: GET
+
+Request:
+
+Response
+templatedetails{
+	componentProperties : [
+		"Application Name",
+		"Module Name",
+		"Component Name",
+		"Reserved Field Required",
+		"Number of Reserved",
+		"Audit Field Required",
+		"Local Field Required",
+		"Override Field Required",
+		"Location",
+		"HelpText"
+	],
+	appProperties : [
+		"Modification History Required",
+		"Enhancement  Number",
+		"Task Number",
+		"Table Title",
+		"Stereotype",
+		"Sub Product",
+		"Classification",
+		"System Clearfile",
+		"Related Files",
+		"Post Closing File",
+		"Equate Prefix",
+		"Table Id Prefix",
+		"Blocked Functions",
+		"Triggerfield",
+		"CNs Operation"
+	],
+	fieldProperties :[
+		"Number Of Fields",
+		"Field Names",
+		"Field Datatypes",
+		"Fields Lengths",
+		"NO Input Field",
+		"Mandatory Field",
+		"Option Field",
+		"Lookup Field",
+		"Check File",
+		"Field Description",
+		"Field Validation"
+
+	]
+		
+		
+}
+
+
+
+Yes
+NoInput
+Mandatory
+Options
+Lookup
+CheckFile
+VirtualFile
+
+
+{
+  "relatedFiles": "-",
+  "equatePrefix": "RD.SGD",
+  "triggerfield": "-",
+  "moduleName": "RD",
+  "postClosingFile": "-",
+  "tableDescription": "Application to replace of BIC",
+  "isLocalFieldRequired": "Yes",
+  "isReservedFieldRequired": "Yes",
+  "componentName": "RD.Config",
+  "applicationName": "RD.SWIFT.GPI.DIR",
+  "tableTitle": "SWIFT GPI directory",
+  "isOverrideFieldRequired": "Yes",
+  "systemClearfile": "-",
+  "isModificationHistoryRequired": "Yes",
+  "CNsOperation": "-",
+  "classification": "INT",
+  "numberOfFields": 6,
+  "tableIdPrefix": "RD",
+  "subProduct": "-",
+  "fieldProperties": [
+    {
+      "property2": "Options",
+      "property1": "NoInput",
+      "fieldValidation": "No Input field\nTest1\nTest2\nTest3",
+      "dataType": "A",
+      "name": "FLAG",
+      "length": 1,
+      "propertyValue": "A_M_D",
+      "fieldDescription": "Flag\nTest\nTes1"
+    },
+    {
+      "property2": "-",
+      "property1": "NoChange",
+      "fieldValidation": "No Change \nField",
+      "dataType": "A",
+      "name": "XX.XX-SOURCE.KEY",
+      "length": 35,
+      "propertyValue": "-",
+      "fieldDescription": "Source Key"
+    },
+    {
+      "property2": "Lookup",
+      "property1": "-",
+      "fieldValidation": "Lookup fields",
+      "dataType": "A",
+      "name": "XX-BRANCH.CODE",
+      "length": 4,
+      "propertyValue": "BRANCH.CODE",
+      "fieldDescription": "Lookup value\nUS01\nEU00\nUS00"
+    },
+    {
+      "property2": "-",
+      "property1": "Mandatory",
+      "fieldValidation": "Mandatory\nTest Descrpition1",
+      "dataType": "ANY",
+      "name": "XX.LL.DESCRIPTION",
+      "length": 35,
+      "propertyValue": "-",
+      "fieldDescription": "Descrpition"
+    },
+    {
+      "property2": "CheckFile",
+      "property1": "Mandatory",
+      "fieldValidation": "Mandatory\nTest Company 1",
+      "dataType": "COM",
+      "name": "COMPANY",
+      "length": 12,
+      "propertyValue": "COMPANY",
+      "fieldDescription": "Should have a valid \ncompany "
+    },
+    {
+      "property2": "-",
+      "property1": "NoChange",
+      "fieldValidation": "Time ",
+      "dataType": "TIME",
+      "name": "CUT.OFF.TIME",
+      "length": 11,
+      "propertyValue": "-",
+      "fieldDescription": "Cut off time value."
+    }
+  ],
+  "isAuditFieldRequired": "Yes",
+  "blockedFunctions": "V",
+  "numberOfReservedFields": 10,
+  "location": "C:/Users/subas/Desktop/Template/localworkspace",
+  "enhancementNo": 3125855,
+  "taskNumber": 3125859,
+  "stereotype": "H",
+  "isHelpText": "Yes"
+}
